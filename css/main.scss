@@ -1,0 +1,212 @@
+@charset "UTF-8";
+
+$color-pastel-red-bg: rgb(248,216,216);
+$color-pastel-red-font: rgb(224,48,64);
+$color-pastel-red-border: rgb(240,176,184);
+$color-pastel-green-bg: rgb(208,232,224);
+$color-pastel-green-font: rgb(24,136,84);
+$color-pastel-green-border: rgb(164,208,188);
+$color-pastel-blue-bg: rgb(212,236,255);
+$color-pastel-blue-font: rgb(64,128,184);
+$color-pastel-blue-border: rgb(192,212,248);
+$color-pastel-gray-bg: rgb(240, 240, 240);
+$color-pastel-gray-font: rgb(128,128,128);
+$color-pastel-gray-border: rgb(208,208,208);
+$border-radius: 4px;
+
+* {
+	font-family: Tahoma, sans-serif;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+}
+
+a:link,
+a:visited,
+a:hover {
+	text-decoration: none;
+	color: orangered;
+}
+
+.title {
+	display: inline-block;
+	font-weight: bold;
+}
+
+body {
+	background-color: white;
+	color: black;
+    margin: 0;
+    padding: 0 10px;
+}
+
+#info {
+	width: 735px;
+	min-height: 20px;
+	padding: 12px;
+	margin: 10px;
+}
+
+.info-gray {
+	background-color: $color-pastel-gray-bg;
+	color: $color-pastel-gray-font;
+	border: 1px solid $color-pastel-gray-border;
+}
+
+.info-red {
+	background-color: $color-pastel-red-bg;
+	color: $color-pastel-red-font;
+	border: 1px solid $color-pastel-red-border;
+}
+
+.info-green {
+	background-color: $color-pastel-green-bg;
+	color: $color-pastel-green-font;
+	border: 1px solid $color-pastel-green-border;
+}
+
+.info-blue {
+	background-color: $color-pastel-blue-bg;
+	color: $color-pastel-blue-font;
+	border: 1px solid $color-pastel-blue-border;
+}
+
+#about {
+	width: 735px;
+	height: 36px;
+	overflow: hidden;
+}
+
+#about-email,
+#about-help {
+	margin-top: 20px;
+}
+
+#search-form {
+	clear: both;
+	margin: 0px;
+}
+
+#word {
+	display: inline-block;
+	font-weight: bold;
+	font-size: 12pt;
+	outline: none;
+}
+
+#word::placeholder {
+	color: $color-pastel-red-font;
+	opacity: .5;
+}
+
+fieldset {
+	display: inline-block;
+	border: 1px solid silver;
+	font-size: 10pt;
+}
+
+fieldset,
+#about,
+#word,
+#start-search {
+	margin: 10px 0px 0px 10px;
+	padding: 10px;
+}
+
+#fieldset-where, 
+#word {
+	width: 520px;
+}
+
+#fieldset-lang,
+#start-search {
+	width: 200px;
+}
+
+fieldset>legend,
+fieldset>label {
+	font-family: 'Courier New', monospace;
+	font-size: 9pt;
+}
+
+fieldset>input[type=radio],
+fieldset>label,
+#start-search,
+#about-title,
+#about-arrow {
+	cursor: pointer;
+}
+
+#start-search {
+	display: inline-block;
+	padding: 12px;
+	font-weight: bold;
+}
+
+fieldset,
+#about,
+#info,
+#word,
+#start-search,
+#table-results {
+	-webkit-border-radius: $border-radius;
+	-moz-border-radius: $border-radius;
+	border-radius: $border-radius;
+}
+
+svg path {
+	fill: rgb(208, 240, 208);
+}
+
+svg:hover path {
+	fill: yellow;
+}
+
+#column-null-header,
+#column-one-header,
+#column-two-header,
+.column-null-body,
+.column-one-body, 
+.column-two-body {
+	width: 325px;
+	padding: 5px;
+}
+
+#column-null-header,
+.column-null-body {
+    width: 80px;
+	text-align: right;
+}
+
+#clear {
+    display: none;
+}
+
+#table-results {
+    margin: 10px 0 10px 10px;
+    border-collapse: collapse;
+    border: 1px solid $color-pastel-gray-border;
+}
+
+#table-results > thead > tr > td,
+#table-results > tbody > tr > td {
+	border: 1px solid $color-pastel-gray-border;
+    padding: 5px;
+    color: black;
+}
+
+#table-results > thead > tr > td {
+	padding: 15px 5px;
+	background-color: $color-pastel-blue-bg;
+	color: $color-pastel-blue-font;
+	font-weight: bold;
+}
+
+#table-results > tbody > tr:nth-child(even) {
+	background-color: #f0f0f0;
+  }
+
+#table-results > tbody > tr:hover {
+    background-color: $color-pastel-green-bg;
+	color: $color-pastel-green-font !important;
+}

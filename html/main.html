@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<title>angol-magyar szótár</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/main.css" media="all"/>
+</head>
+<body>
+	<!-- about -->
+	<div id="about" class="info-gray">
+		<div id="about-head">
+			<span id="about-title"></span>
+			<span id="about-arrow"></span>
+		</div>
+		<div id="about-email"></div>
+		<div id="about-help"></div>
+	</div>
+	<!-- /about -->
+	<!-- form -->
+	<form name="search-form" id="search-form" method="POST" action="">
+		<fieldset id="fieldset-where">
+			<legend>Hol keresel?</legend>
+			<input type="radio" id="where-begin" name="where" value="begin">
+			<label for="where-begin">szó/kifejezés elején keresek&nbsp;</label>
+			<input type="radio" id="where-middle" name="where" value="middle">
+			<label for="where-middle">szó/kifejezés közepén keresek</label><br>
+			<input type="radio" id="where-end" name="where" value="end">
+			<label for="where-end">szó/kifejezés végén keresek&nbsp;&nbsp;</label>
+			<input type="radio" id="where-full" name="where" value="full">
+			<label for="where-full">teljes szóra/kifejezésre keresek</label><br>
+		</fieldset>
+		<fieldset id="fieldset-lang">
+			<legend>Milyen nyelven keresel?</legend>
+			<input type="radio" id="lang-en" name="lang" value="en">
+			<label for="lang-en">angol nyelven</label><br>
+			<input type="radio" id="lang-hu" name="lang" value="hu">
+			<label for="lang-hu">magyar nyelven</label><br>
+		</fieldset>
+		<br>
+		<input type="text" name="word" id="word" class="info-red" placeholder="minimum 3 karakter">
+		<input type="button" name="start-search" id="start-search" class="info-red" value="KERESÉS">
+	</form>
+	<!-- /form -->
+	<div id="info" class="info-gray">Minimum 3 karakter beírásával kereshetsz mindkét nyelven</div>
+	<div id="results"></div>
+	<script>
+		if (typeof module === 'object') {
+			window.module = module;
+			module = undefined;
+		}
+	</script>
+	<script src="../script/jquery/jquery-3.6.0.js"></script>
+	<script>
+		if (window.module) {
+			module = window.module;
+		}
+	</script>
+	<script src="../script/renderer.js"></script>
+</body>
+</html>
